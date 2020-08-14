@@ -1,0 +1,24 @@
+version : '3'
+
+services:
+  mysql:
+    image: mysql:latest
+    ports:
+      - 3307:3306
+
+    environment:
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    restart: always
+    depends_on:
+      - mysql
+    ports:
+      - 8080:80
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      PMA_HOST: mysql
+
