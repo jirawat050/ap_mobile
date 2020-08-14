@@ -30,6 +30,7 @@ services:
       dockerfile: Dockerfile
     depends_on:
       - mysql
+    # command: ["./wait-for-it.sh", "mysql:3306"]
 
     links:
       - mysql
@@ -38,7 +39,7 @@ services:
       MYSQL_PASSWORD: root
       MYSQL_ROOT_PASSWORD: root
     ports:
-      - "8000:80"
+      - "8000:8000"
 
   
 

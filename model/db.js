@@ -6,7 +6,7 @@ const db = mysql.createConnection ({
     user: 'root',
     password: 'root',
     database: 'ap_test',
-    port: 3307,
+    port: 3306,
    
 });
 db.connect(function(err) {
