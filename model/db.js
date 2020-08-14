@@ -2,7 +2,7 @@ const mysql = require('mysql2');
 
 
 const db = mysql.createConnection ({
-    host: 'localhost',
+    host: 'localhost', // not connact change to host = mysql
     user: 'root',
     password: 'root',
     database: 'ap_test',
